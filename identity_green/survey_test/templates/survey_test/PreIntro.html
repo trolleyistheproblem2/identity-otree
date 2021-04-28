@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Pre Intro Page
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Please answer the following questions. Remember, all your responses are completely anonymous. They cannot be traced back to you, even by the researchers.
+    </p>
+
+    <p>If you have any questions, please raise your hand and ask the instructor. If not, please proceed to the questions by clicking the next button.</p>
+
+
+
+    {% next_button %}
+
+{% endblock %}

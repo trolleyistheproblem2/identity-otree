@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Distribute INR 400 among your table members.
+{% endblock %}
+
+{% block content %}
+
+    <table border = 2 cellpadding="10" class="RankTable">
+  <tr>
+    <th>Table Member 1</th>
+    <th>Table Member 2</th>
+      <th>Table Member 3</th>
+      <th>Table Member 4</th>
+
+  </tr>
+       <tr>
+           <td><img src="{% static image_path1 %}" height="200" width="250"/></td>
+            <td><img src="{% static image_path2 %}" height="200" width="250"/></td>
+           <td><img src="{% static image_path3 %}" height="200" width="250"/></td>
+           <td><img src="{% static image_path4 %}" height="200" width="250"/></td>
+
+  </tr>
+
+        <tr>
+           <td>{% formfield player.allocation1 %}</td>
+            <td>{% formfield player.allocation2 %}</td>
+           <td>{% formfield player.allocation3 %}</td>
+           <td>{% formfield player.allocation4 %}</td>
+
+  </tr>
+
+
+    </table>
+
+    <p></p>
+    <p></p>
+
+    {% next_button %}
+
+
+
+    {{ block.super }}
+{% endblock %}

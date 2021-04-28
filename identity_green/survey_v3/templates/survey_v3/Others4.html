@@ -1,0 +1,122 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Test Questions
+{% endblock %}
+
+{% block content %}
+
+    <p>
+Please answer the following questions about your table members from the previous activity:
+    </p>
+
+
+    <p></p>
+    <p></p>
+    <p><b>Table Member A</b></p>
+
+    <img src="{% static image_path1 %}" height="300" width="400"/>
+    <table border = 2 cellpadding="10" class="PlayerTable">
+  <tr>
+    <th>Question</th>
+    <th>Options</th>
+
+  </tr>
+       <tr>
+           <td>Age</td>
+    <td>{% formfield player.age4_1 %} </td>
+
+  </tr>
+       <tr>
+           <td>Gender</td>
+    <td>{% formfield player.gender4_1 %}</td>
+
+  </tr>
+
+  <tr>
+    <td>Religion</td>
+    <td>{% formfield player.religion4_1 %}</td>
+  </tr>
+    <tr>
+    <td>income</td>
+    <td>{% formfield player.income4_1 %}</td>
+  </tr>
+
+   </table>
+
+
+    <p></p>
+    <p></p>
+    <p><b>Table Member B</b></p>
+
+    <img src="{% static image_path2 %}" height="300" width="400"/>
+    <table border = 2 cellpadding="10" class="PlayerTable">
+  <tr>
+    <th>Question</th>
+    <th>Options</th>
+
+  </tr>
+       <tr>
+           <td>Age</td>
+    <td>{% formfield player.age4_2 %} </td>
+
+  </tr>
+       <tr>
+           <td>Gender</td>
+    <td>{% formfield player.gender4_2 %}</td>
+
+  </tr>
+
+  <tr>
+    <td>Religion</td>
+    <td>{% formfield player.religion4_2 %}</td>
+  </tr>
+    <tr>
+    <td>income</td>
+    <td>{% formfield player.income4_2 %}</td>
+  </tr>
+
+   </table>
+
+
+    <p></p>
+    <p></p>
+    <p><b>Table Member C</b></p>
+
+    <img src="{% static image_path3 %}" height="300" width="400"/>
+    <table border = 2 cellpadding="10" class="PlayerTable">
+  <tr>
+    <th>Question</th>
+    <th>Options</th>
+
+  </tr>
+       <tr>
+           <td>Age</td>
+    <td>{% formfield player.age4_3 %} </td>
+
+  </tr>
+       <tr>
+           <td>Gender</td>
+    <td>{% formfield player.gender4_3 %}</td>
+
+  </tr>
+
+  <tr>
+    <td>Religion</td>
+    <td>{% formfield player.religion4_3 %}</td>
+  </tr>
+    <tr>
+    <td>income</td>
+    <td>{% formfield player.income4_3 %}</td>
+  </tr>
+
+   </table>
+
+
+    <p></p>
+    <p></p>
+
+    {% next_button %}
+
+{% endblock %}

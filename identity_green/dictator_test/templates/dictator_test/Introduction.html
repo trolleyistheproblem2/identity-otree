@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Game 2 Instructions{% endblock %}
+
+{% block content %}
+
+    <p>In this task, you will be given an amount of INR 100. Again, you will be paired with a randomly chosen participant in this room. You will be given an option to send any amount from INR 0 to INR 100 to your partner in each round. You will keep the rest of the amount for yourself. </p>
+
+    <p>You will play 9 rounds of this game and your final earning will be determined by a random draw from one of the rounds. </p>
+
+    <p>In each round, you will be paired with a new partner. This partner will also have the option to send some money to you. However, he or she will not know how much you have sent. </p>
+
+
+        {% formfield player.subject_id %}
+{% next_button %}
+{% endblock %}

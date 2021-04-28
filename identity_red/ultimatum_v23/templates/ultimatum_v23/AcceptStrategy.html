@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Receiving Money
+{% endblock %}
+
+{% block content %}
+
+    <p>In the previous screen, you were the sender. Now imagine, you are
+the receiver, and your partner is the sender.</p>
+
+
+
+    <p>
+        The proposer will make you an offer on how to divide
+        the {{ Constants.endowment }}.
+    </p>
+
+    Your partner is:
+
+    <table border = 2 cellpadding="10" class="PartnerTable">
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+
+  </tr>
+       <tr>
+    <td>Age Group</td>
+    <td>18-22</td>
+  </tr>
+       <tr>
+    <td>Gender</td>
+    <td>Male </td>
+  </tr>
+   <tr>
+    <td>Religion</td>
+    <td>{% if partner_type == 1 %} Hindu {% elif partner_type == 2 %} Hindu {% elif partner_type == 3 %} Muslim {% else %} Hindu {% endif %}  </td>
+  </tr>
+   <tr>
+    <td>Fees at college</td>
+    <td>{% if partner_type == 1 %} as low as ₹ 555 per year {% elif partner_type == 2 %} as low as ₹ 555 per year {% elif partner_type == 3 %} as low as ₹ 555 per year {% else %} ₹ 5.6 lacs per year {% endif %}  </td>
+  </tr>
+   </table>
+
+    <p>
+        Please choose below how you would respond to each of the possible
+        offers.
+    </p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+    {% next_button %}
+{#    {% include Constants.instructions_template %}#}
+
+{% endblock %}
+

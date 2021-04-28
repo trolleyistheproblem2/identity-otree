@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+
+        Activity 6: Instructions
+
+{% endblock %}
+
+{% block content %}
+
+{#    {% include Constants.instructions_template %}#}
+
+    <p>For the second activity, you will again be given Rs. 50.</p>
+    <p>You again have to decide how much of this money, you want to
+send to the person you are playing with.</p>
+    <p>If the person you are playing with <b>rejects</b> what you send, neither of you get any money.</p>
+    <p>Only if the person you are playing with <b>accepts</b>, both of you get the amount you
+decided. </p>
+
+{#    {% formfield player.subject_id %}#}
+
+    {% next_button %}
+
+
+
+{% endblock %}

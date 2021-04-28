@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Personal Information
+{% endblock %}
+
+{% block content %}
+
+    <p>
+This is your personal information which will be shared with other participants later on in the session.
+    </p>
+
+    <table border = 2 cellpadding="10" class="PlayerTable">
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+
+  </tr>
+       <tr>
+           <td>Religion</td>
+    <td>{{ player_religion }}</td>
+
+  </tr>
+       <tr>
+           <td>Type</td>
+    <td>{{ player_type }} </td>
+
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>{{ player_age }}</td>
+  </tr>
+
+    </table>
+
+
+
+    {% next_button %}
+
+{% endblock %}

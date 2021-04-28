@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Results (For Debug Purposes)
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+        Your payoff is {{ player.payoff }}.
+    </p>
+
+    {% next_button %}
+{#    {% include Constants.instructions_template %}#}
+
+{% endblock %}

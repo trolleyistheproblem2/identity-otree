@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Introduction
+{% endblock %}
+
+{% block content %}
+
+    <p>Welcome to the Centre for Experimental Social Sciences. </p>
+    <p>You are invited to answer some questions and play a game where your responses to different decision situations influence your final payment. In total, the experiment will take ca 30 minutes. </p>
+    <p>All instructions will be provided on your screens. </p>
+    <p>   Before we begin the game, we will ask you to answer a short questionnaire, starting with your subject ID. This is the number written on the chit you picked out of the bag, before entering the room. </p>
+
+    <p>
+What is your subject ID? Please enter it in the box below.
+    </p>
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}

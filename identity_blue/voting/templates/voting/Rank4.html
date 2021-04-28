@@ -1,0 +1,71 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Pick a Leader
+{% endblock %}
+
+{% block content %}
+{#    <table border = 2 cellpadding="10" class="RankTable">#}
+{#  <tr>#}
+{#    <th>Candidate A</th>#}
+{#    <th>Candidate B</th>#}
+{#      <th>Candidate C</th>#}
+{#      <th>Candidate D</th>#}
+{##}
+{#  </tr>#}
+{#       <tr>#}
+{#           <td><img src="{% static image_path1 %}"/></td>#}
+{#            <td><img src="{% static image_path2 %}"/></td>#}
+{#           <td><img src="{% static image_path3 %}"/></td>#}
+{#           <td><img src="{% static image_path4 %}"/></td>#}
+{##}
+{#  </tr>#}
+{##}
+{#        <tr>#}
+{#           <td>{% formfield player.rank1 %}</td>#}
+{#            <td>{% formfield player.rank2 %}</td>#}
+{#           <td>{% formfield player.rank3 %}</td>#}
+{#           <td>{% formfield player.rank4 %}</td>#}
+{#  </tr>#}
+{#    </table>#}
+
+        <table border = 2 cellpadding="10" class="RankTable">
+  <tr>
+
+    <th>Candidate A</th>
+      <th>Candidate B</th>
+      <th>Candidate C</th>
+
+  </tr>
+       <tr>
+
+            <td><img src="{% static image_path1 %}" height="300" width="400"/></td>
+           <td><img src="{% static image_path2 %}" height="300" width="400"/></td>
+           <td><img src="{% static image_path3 %}" height="300" width="400"/></td>
+
+  </tr>
+
+        <tr>
+
+            <td>Give a rank to Candidate A:
+            <input type="number" name="rank1" value="" min="1" max="3" required="" id="id_rank1" class="form-control">
+            </td>
+           <td>Give a rank to Candidate B:
+            <input type="number" name="rank2" value="" min="1" max="3" required="" id="id_rank2" class="form-control"></td>
+           <td>Give a rank to Candidate C:
+            <input type="number" name="rank3" value="" min="1" max="3" required="" id="id_rank4" class="form-control"></td>
+  </tr>
+    </table>
+
+
+
+<p></p>
+    <p></p>
+
+    {% next_button %}
+
+
+
+    {{ block.super }}
+{% endblock %}

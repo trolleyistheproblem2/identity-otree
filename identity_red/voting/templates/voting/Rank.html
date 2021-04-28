@@ -1,0 +1,151 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Pick a Leader
+{% endblock %}
+
+{% block content %}
+{#    <table border = 2 cellpadding="10" class="RankTable">#}
+{#  <tr>#}
+{#    <th>Candidate A</th>#}
+{#    <th>Candidate 2</th>#}
+{#      <th>Candidate 3</th>#}
+{#      <th>Candidate 4</th>#}
+{##}
+{#  </tr>#}
+{#       <tr>#}
+{#           <td><img src="{% static image_path1 %}"/></td>#}
+{#            <td><img src="{% static image_path2 %}"/></td>#}
+{#           <td><img src="{% static image_path3 %}"/></td>#}
+{#           <td><img src="{% static image_path4 %}"/></td>#}
+{##}
+{#  </tr>#}
+{##}
+{#        <tr>#}
+{#           <td>{% formfield player.rank1 %}</td>#}
+{#            <td>{% formfield player.rank2 %}</td>#}
+{#           <td>{% formfield player.rank3 %}</td>#}
+{#           <td>{% formfield player.rank4 %}</td>#}
+{#  </tr>#}
+{#    </table>#}
+
+    {% if player_type == 1 %}
+
+        <table border = 2 cellpadding="10" class="RankTable">
+  <tr>
+
+    <th>Candidate B</th>
+      <th>Candidate C</th>
+      <th>Candidate D</th>
+
+  </tr>
+       <tr>
+
+            <td><img src="{% static image_path2 %}"/></td>
+           <td><img src="{% static image_path3 %}"/></td>
+           <td><img src="{% static image_path4 %}"/></td>
+
+  </tr>
+
+        <tr>
+
+            <td>{% formfield player.rank2 %}</td>
+           <td>{% formfield player.rank3 %}</td>
+           <td>{% formfield player.rank4 %}</td>
+  </tr>
+    </table>
+                {{ form.rank1.errors }}
+
+    {% elif player_type == 2 %}
+
+        <table border = 2 cellpadding="10" class="RankTable">
+  <tr>
+
+    <th>Candidate A</th>
+      <th>Candidate C</th>
+      <th>Candidate D</th>
+
+  </tr>
+       <tr>
+
+            <td><img src="{% static image_path1 %}"/></td>
+           <td><img src="{% static image_path3 %}"/></td>
+           <td><img src="{% static image_path4 %}"/></td>
+
+  </tr>
+
+        <tr>
+
+            <td>{% formfield player.rank1 %}</td>
+           <td>{% formfield player.rank3 %}</td>
+           <td>{% formfield player.rank4 %}</td>
+  </tr>
+    </table>
+
+
+        {{ form.rank2.errors }}
+    {% elif player_type == 3 %}
+
+        <table border = 2 cellpadding="10" class="RankTable">
+  <tr>
+
+    <th>Candidate A</th>
+      <th>Candidate B</th>
+      <th>Candidate D</th>
+
+  </tr>
+       <tr>
+
+            <td><img src="{% static image_path1 %}"/></td>
+           <td><img src="{% static image_path2 %}"/></td>
+           <td><img src="{% static image_path4 %}"/></td>
+
+  </tr>
+
+        <tr>
+
+            <td>{% formfield player.rank1 %}</td>
+           <td>{% formfield player.rank2 %}</td>
+           <td>{% formfield player.rank4 %}</td>
+  </tr>
+    </table>
+
+        {{ form.rank3.errors }}
+
+    {% elif player_type == 4 %}
+
+        <table border = 2 cellpadding="10" class="RankTable">
+  <tr>
+
+    <th>Candidate A</th>
+      <th>Candidate B</th>
+      <th>Candidate C</th>
+
+  </tr>
+       <tr>
+
+            <td><img src="{% static image_path1 %}"/></td>
+           <td><img src="{% static image_path2 %}"/></td>
+           <td><img src="{% static image_path3 %}"/></td>
+
+  </tr>
+
+        <tr>
+
+            <td>{% formfield player.rank1 %}</td>
+           <td>{% formfield player.rank2 %}</td>
+           <td>{% formfield player.rank3 %}</td>
+  </tr>
+    </table>
+
+        {{ form.rank4.errors }}
+    {% endif %}
+
+
+    {% next_button %}
+
+
+
+    {{ block.super }}
+{% endblock %}

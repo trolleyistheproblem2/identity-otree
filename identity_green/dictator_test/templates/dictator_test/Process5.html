@@ -1,0 +1,49 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Your partner answered the following:
+    {% endblock %}
+
+{% block content %}
+
+
+    Your partner is
+
+   <table border = 2 cellpadding="10">
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+
+  </tr>
+       <tr>
+    <td>Socioeconomic Status</td>
+    <td>{{ partner_senior }} Status</td>
+  </tr>
+       <tr>
+    <td>Religion</td>
+    <td>{{ partner_religion }}</td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>{{ partner_age }}</td>
+  </tr>
+  <tr>
+    <td>Income</td>
+    <td>{{ partner_senior }}</td>
+  </tr>
+   </table>
+
+
+
+
+
+
+
+
+
+
+
+    {% next_button %}
+
+{% endblock %}

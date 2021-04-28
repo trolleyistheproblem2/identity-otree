@@ -1,0 +1,80 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Decision: Round {{ player.round_number  }}{% endblock %}
+
+{% block content %}
+    <p>
+
+
+    </p>
+
+Your partner is
+
+   <table border = 2 cellpadding="10" class="PartnerTable">
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+
+  </tr>
+       <tr>
+    <td>Age Group</td>
+    <td>18-22</td>
+  </tr>
+       <tr>
+    <td>Gender</td>
+    <td>Male </td>
+  </tr>
+   <tr>
+    <td>Religion</td>
+    <td>{% if partner_type == 1 %} Hindu {% elif partner_type == 2 %} Hindu {% elif partner_type == 3 %} Muslim {% else %} Hindu {% endif %}  </td>
+  </tr>
+   <tr>
+    <td>Fees at his/her college</td>
+    <td>{% if partner_type == 1 %} as low as ₹ 555 per year {% elif partner_type == 2 %} as low as ₹ 555 per year {% elif partner_type == 3 %} as low as ₹ 555 per year {% else %} ₹ 5.6 lacs per year {% endif %}  </td>
+  </tr>
+   </table>
+
+
+
+{#    <table border = 2 cellpadding="10" class="PlayerTable">#}
+{#  <tr>#}
+{#    <th>Question</th>#}
+{#    <th>Answer</th>#}
+{##}
+{#  </tr>#}
+{#       <tr>#}
+{#    <td>Age Group</td>#}
+{#    <td>18-25</td>#}
+{#  </tr>#}
+{#       <tr>#}
+{#    <td>Gender</td>#}
+{#    <td>Male </td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td>Languages Spoken</td>#}
+{#    <td>Hindi, English</td>#}
+{#  </tr>#}
+{#  <tr>#}
+{#    <td>Religion</td>#}
+{#    <td>{{ player_religion }}</td>#}
+{#  </tr>#}
+{#   <tr>#}
+{#    <td>Monthly College Tuition</td>#}
+{#    <td>{% if player_type == 1 %} INR 100 {% elif player_type == 2 %} INR 200 {% elif player_type == 3 %} INR 300 {% else %} INR 400 {% endif %}  </td>#}
+{#  </tr>#}
+{#   </table>#}
+
+
+<p>
+
+    Please enter an amount in rupees, from 0 to 100 in the box below. This amount will be sent to your partner. You will keep the rest.
+</p>
+
+{% formfield player.sent label="I will send" %}
+
+{% next_button %}
+
+
+
+{% endblock %}

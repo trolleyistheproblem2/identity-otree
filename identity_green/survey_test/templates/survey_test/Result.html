@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        We will now divide all of you into two groups. Each group will have a chance to win an additional prize at the end of the game.Who wins the prize will be determined randomly (through a coin toss) at the end of the game. </p>
+
+
+We create the groups based on your position in the income distribution. Based on your position, you have been assigned to the group type <b>{{ participant.vars.type }}</b>.
+    </p>
+
+
+
+    {% next_button %}
+
+{% endblock %}

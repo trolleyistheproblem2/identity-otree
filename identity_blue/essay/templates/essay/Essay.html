@@ -1,0 +1,62 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Essay Page
+{% endblock %}
+
+
+{% block style %}
+
+    <style>
+
+    .form-control{
+        width : 900px;
+        height: 100px;
+    }
+
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    <p>Please write a paragraph on the topic given below.</p>
+
+    {% if essay_type == 1 %}
+
+   <b>Food prices have been rising. How does this directly affect you?</b>
+        <p></p>
+        <b>खाद्य की कीमतें बढ़ती रही हैं। यह आपको सीधे कैसे प्रभावित करता है?</b>
+    {% elif essay_type == 2 %}
+
+        <b>What are the good things your parents taught you about your religion?</b>
+        <p></p>
+        <b>आपके माता-पिता ने आपके धर्म के बारे में आपको कौन सी अच्छी बातें सिखाई हैं?</b>
+
+    {% endif %}
+
+{#    {% formfield player.essay_text %}#}
+
+    <div class="form-group required">
+
+            <label class="col-form-label" for="id_essay_text">Write in the box below:</label>
+            <div class="controls  field-essay_text">
+                <textarea name="essay_text"
+  cols ="20" rows="50" required id="id_essay_text" class="form-control">
+</textarea>
+
+
+
+            </div>
+
+
+</div>
+
+
+    {% next_button %}
+
+{% endblock %}
+
+
+

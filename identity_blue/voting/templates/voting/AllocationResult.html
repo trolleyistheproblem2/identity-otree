@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    New Activity
+{% endblock %}
+
+{% block content %}
+
+    We have finished Activity 2. Please click the Next button and wait for instructions.
+
+
+    {% next_button %}
+
+
+
+    {{ block.super }}
+{% endblock %}

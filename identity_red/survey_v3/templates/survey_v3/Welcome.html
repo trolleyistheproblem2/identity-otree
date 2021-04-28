@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Activity 3: Test Questions
+{% endblock %}
+
+{% block content %}
+
+    <p>For this activity, you will be given a short test about each person you
+met upstairs.</p>
+
+    <p>You will be shown a photo and asked some questions about them.</p>
+
+    <p>You will earn 10 rupees per correct answer.</p>
+
+{#    {% formfield player.subject_id %}#}
+
+    {% next_button %}
+
+{% endblock %}

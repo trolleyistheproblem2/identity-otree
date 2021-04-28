@@ -1,0 +1,152 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Decision: Round {{ player.round_number  }}
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+    <style>
+        .highlight-row-on-hover:hover td {
+            background-color: #fcf8e3;
+        }
+
+        .PayoffTable{
+
+            position:relative;
+
+        }
+
+        .PartnerTable{
+            position: relative;
+
+        }
+
+        .PlayerTable{
+            position: relative;
+            float: right;
+
+        }
+
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+   Your partner is
+
+
+   <table border = 2 cellpadding="10" class="PartnerTable">
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+
+  </tr>
+       <tr>
+    <td>Religion</td>
+    <td>{{ partner_religion }}</td>
+  </tr>
+       <tr>
+    <td>Group</td>
+    <td>{{ partner_senior }} Status</td>
+  </tr>
+  <tr>
+    <td>Year of Study</td>
+    <td>{{ partner_study_year }}</td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>{{ partner_age }}</td>
+  </tr>
+   </table>
+
+
+
+    <table border = 2 cellpadding="10" class="PlayerTable">
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+
+  </tr>
+       <tr>
+    <td>Religion</td>
+    <td>{{ player_religion }}</td>
+  </tr>
+       <tr>
+    <td>Group</td>
+    <td>{{ player_senior }} Status</td>
+  </tr>
+  <tr>
+    <td>Year of Study</td>
+    <td>{{ player_study_year }}</td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>{{ player_age }}</td>
+  </tr>
+   </table>
+
+
+
+     <table border = 2 cellpadding="10" class = "PayoffTable">
+  <tr>
+    <th>Your Decision</th>
+    <th>Your Earnings (Rupees)</th>
+        <th>Partner's Earnings (Rupees)</th>
+      <th>Partner's Decisions</th>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>{{ subsession.both_cooperate_payoff }}</td>
+    <td>{{ subsession.both_cooperate_payoff }}</td>
+      <td>+</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>{{ subsession.betrayed_payoff }}</td>
+    <td>{{ subsession.betray_payoff }}</td>
+      <td>-</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>{{ subsession.betray_payoff }}</td>
+    <td>{{ subsession.betrayed_payoff }}</td>
+      <td>+</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>{{ subsession.both_defect_payoff }}</td>
+    <td>{{ subsession.both_defect_payoff }}</td>
+      <td>-</td>
+  </tr>
+
+
+
+
+
+</table>
+    <div class="form-group required">
+        <table class="table table-bordered text-center" style="width: auto; margin: auto">
+
+            <tr class="highlight-column-on-hover">
+                <td><button name="decision" value="Cooperate" class="btn btn-primary btn-large">Decision +</button></td>
+                <td><button name="decision" value="Defect" class="btn btn-primary btn-large">Decision -</button></td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+
+    {% include Constants.instructions2_template %}
+
+{% endblock %}

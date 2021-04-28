@@ -1,0 +1,62 @@
+{% load otree %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+
+    <h3>
+        Instructions
+    </h3>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'global/matrix.css' %}"/>
+
+        <p>
+        In the following games, you will be paired with a randomly chosen participant in this room. You will be shown some information about them, from the responses they provided in the pre-game questions. Similarly, they will be shown your responses from the pre-game questions. Remember, none of this information can be used to identify you, so feel free to make any decision you want. We will also ask you not to reveal your decisions outside this session to anyone.
+
+        </p>
+        <p>
+
+        In the first game, you can make one of two decisions. Decision @ or decision #. You and your partner’s payoffs vary according to the decisions made by both of you.
+        </p>
+    <p><i>Please take a close look at the table below. </i></p>
+
+    <table border = 2 cellpadding="10" class = "PayoffTable">
+  <tr>
+    <th>Your Decision</th>
+    <th>Your Earnings (Rupees)</th>
+        <th>Partner's Earnings (Rupees)</th>
+      <th>Partner's Decisions</th>
+  </tr>
+  <tr>
+    <td>@</td>
+    <td>{{ subsession.both_cooperate_payoff }}</td>
+    <td>{{ subsession.both_cooperate_payoff }}</td>
+      <td>@</td>
+  </tr>
+  <tr>
+    <td>@</td>
+    <td>{{ subsession.betrayed_payoff }}</td>
+    <td>{{ subsession.betray_payoff }}</td>
+      <td>#</td>
+  </tr>
+  <tr>
+    <td>#</td>
+    <td>{{ subsession.betray_payoff }}</td>
+    <td>{{ subsession.betrayed_payoff }}</td>
+      <td>@</td>
+  </tr>
+  <tr>
+    <td>#</td>
+    <td>{% if player.id_in_group == 1 %} ₹ 60 {% else %} ₹ 20  {% endif %} </td>
+    <td>{% if player.id_in_group == 1 %}₹ 20 {% else %} ₹ 60 {% endif %}</td>
+      <td>#</td>
+  </tr>
+
+        <p>Your partner can change across rounds, so can the payoff structure, so you must pay attention to your partner’s information, and the game payoff!</p>
+
+
+
+
+
+</div>
+</div>

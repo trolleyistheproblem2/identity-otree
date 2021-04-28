@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Thank You!
+{% endblock %}
+
+{% block content %}
+    <p></p>
+    {% formfield player.family_income %}
+    <p></p>
+
+    <p></p>
+    {% formfield player.outfit %}
+    <p></p>
+
+
+    <p></p>
+    {% formfield player.mother_tongue %}
+    <p></p>
+
+
+    <p></p>
+    {% formfield player.english_fluency %}
+    <p></p>
+
+
+    <p></p>
+    {% formfield player.hindi_fluency %}
+    <p></p>
+
+
+    You will now be shown your payments on the next page.
+
+    {% next_button %}
+
+{% endblock %}

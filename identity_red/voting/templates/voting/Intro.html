@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Activity 2 Instructions
+{% endblock %}
+
+{% block content %}
+
+    <p>For this activity, you have to choose a leader from your table mates upstairs.</p>
+
+    <p>The leader has the responsibility to distribute Rs. 400 amongst the
+four of you, in any way he wishes. For example, the leader can keep all
+the money; or the leader can distribute it equally; or the leader can
+give some people more and some people less. There is no rule that he
+has to distribute this money equally.</p>
+
+    <p>On your screen, you will see three images of the other people from
+your table upstairs. At the bottom of these images, you will see a box.
+Enter 1 for your first choice, 2 for your second choice and 3 for your
+third choice.</p>
+
+
+
+
+
+
+    {% next_button %}
+
+
+
+    {{ block.super }}
+{% endblock %}

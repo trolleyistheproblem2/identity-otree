@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+
+        Game 7: Instructions
+
+{% endblock %}
+
+{% block content %}
+
+{#    {% include Constants.instructions_template %}#}
+
+    <p>For the second game, you will again be given Rs. 50.</p>
+    <p>You again have to decide how much of this money, you want to
+send to your partner.</p>
+    <p>If your partner <b>rejects</b> what you send, neither of you get any money.</p>
+    <p>Only if your partner <b>accepts</b>, both of you get the amount you
+decided. </p>
+
+{#    {% formfield player.subject_id %}#}
+
+    {% next_button %}
+
+
+
+{% endblock %}

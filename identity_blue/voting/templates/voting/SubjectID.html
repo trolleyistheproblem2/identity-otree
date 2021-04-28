@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Subject ID
+{% endblock %}
+
+{% block content %}
+
+
+    <p>To begin, please enter your Subject ID below.</p>
+
+    {% formfield player.subject_id %}
+
+
+
+
+    {% next_button %}
+
+
+
+    {{ block.super }}
+{% endblock %}
